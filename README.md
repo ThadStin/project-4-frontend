@@ -1,3 +1,19 @@
+#User Story
+With the explosion of Craft beer over the past 10 years, it has become impossible to remember all of the beers a person would like to try.  Especially with the popularity of seasonal or limited release beers and the constant output of new styles.  Occasionally, a beer will even change names (i.e. Stone Enjoy By:) making it even more difficult to keep track of beers.
+
+This website was created with the beer enthusiast in mind.  A place to find beers, add beers to a list to try, update that list if the name of the beer changes, and delete those beers that have been sampled.
+
+- A user needs to be able to see a list of beers to choose rendered from an api. Or seeded db?
+- Search by brewery, location, beer name, style?
+- A user needs to be able to add those beers to a personal list (personal database).
+- A user needs to be able to see the listing of beers in personal database.
+- A user needs to be able to update beers in personal database.
+- A user needs to be able to delete specified beers from personal database.
+- A user needs to be able to login to personal database.
+- A user needs to be able to log out of personal database
+
+
+## Old CRA README info
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
