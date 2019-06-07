@@ -1,4 +1,4 @@
-#User Story
+# User Story
 With the explosion of Craft beer over the past 10 years, it has become impossible to remember all of the beers a person would like to try.  Especially with the popularity of seasonal or limited release beers and the constant output of new styles.  Occasionally, a beer will even change names (i.e. Stone Enjoy By:) making it even more difficult to keep track of beers.
 
 This website was created with the beer enthusiast in mind.  A place to find beers, add beers to a list to try, update that list if the name of the beer changes, and delete those beers that have been sampled.
