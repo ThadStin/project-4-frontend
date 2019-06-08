@@ -14,12 +14,50 @@ class Form extends Component {
       liked: false,
       img: ''
     }
+    ///////////  binding  ///////////
+    // this.handleChange = this.handleChange.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this)
   }
+  ////////////  methods  ///////////
+  // handleChange = (event) => {
+  //   this.setState({task_item: event.target.value})
+  // }
+  //
+  // handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   this.props.handleCreateTask(this.state)
+  //   this.clearForm()
+  // }
+  //
+  // clearForm = () => {
+  //   this.setState({ task_item: '' })
+  // }
+
 
   render () {
     return (
-      <div>
-
+      <div className="form" onSubmit={this.handleSubmit}>
+        <form>
+          <input
+            type='text'
+            placholder='Brewery Name'
+            onChange={this.handleChange}
+            value={this.state.brewery_name}
+          />
+          <input
+            type='text'
+            placholder='Beer Name'
+            onChange={this.handleChange}
+            value={this.state.beer_name}
+          />
+          <input
+            type='text'
+            placholder='Beer Style'
+            onChange={this.handleChange}
+            value={this.state.beer_style}
+          />
+          <button type='submit'> SUBMIT </button>
+        </form>
       </div>
     )
   }
