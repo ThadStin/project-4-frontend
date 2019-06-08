@@ -20,19 +20,19 @@ class Form extends Component {
   }
   ////////////  methods  ///////////
   // handleChange = (event) => {
-  //   this.setState({task_item: event.target.value})
+  //   this.setState({beer_name: event.target.value})
   // }
   //
   // handleSubmit = (event) => {
   //   event.preventDefault()
-  //   this.props.handleCreateTask(this.state)
+  //   this.props.handleCreateBeer(this.state)
   //   this.clearForm()
   // }
   //
   // clearForm = () => {
-  //   this.setState({ task_item: '' })
+  //   this.setState({ beer_name: '' })
   // }
-
+//------------- gonna have to flesh out this file quite a bit ----------
 
   render () {
     return (
