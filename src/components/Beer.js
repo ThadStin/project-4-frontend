@@ -8,6 +8,7 @@ class Beer extends Component {
         {this.props.beer.beer_name}
         {this.props.beer.img}
         {this.props.beer.brewery_name}
+        {this.props.beer.location}
         {this.props.beer.comments}
         </div>
         <div className="beer-actions">
