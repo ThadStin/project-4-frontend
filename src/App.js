@@ -125,7 +125,7 @@ class App extends Component {
           }
       })
       .catch(err => console.log('this is error from handleCheck', err))
-  } //----- I am not sure this is right
+  } //----- This is going to need a LOT f work!!
 
   removeFromArray(array, arrayIndex) {
     this.setState(prevState => {
@@ -167,7 +167,12 @@ class App extends Component {
         handleCreateBeer={this.handleCreateBeer}
       />
       <BeerList
-
+      currentView={this.state.currentView}
+      handleView={this.handleView}
+      wantToTryBeers={this.state.wantToTryBeers}
+      triedBeers={this.state.triedBeers}
+      handleCheck={this.handleCheck}
+      handleDelete={this.handleDelete}
       />
       </div>
     )
