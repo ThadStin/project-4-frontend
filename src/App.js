@@ -164,7 +164,7 @@ class App extends Component {
         // wantToTryCount={this.state.wantToTryBeers.length}
       />
       <Form
-
+        handleCreateBeer={this.handleCreateBeer}
       />
       <BeerList
 
