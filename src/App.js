@@ -11,7 +11,7 @@ class App extends Component {
     super(props)
     this.state = {
       currentView: 'tried',
-      triedbeers: ['Temptress'],
+      triedBeers: ['Temptress'],
       wantToTryBeers: ['Pliny the Elder']
     }//------ Will probably have to update state -------
 
@@ -48,8 +48,8 @@ class App extends Component {
   } //----- this may need to change unsure about fetchBeers vs breweries
 
   sortBeers(beers) {
-    let triedBeers = []
-    let wantToTryBeers = []
+    let triedBeers = ['Temptress']
+    let wantToTryBeers = ['Pliny the Elder']
     beers.ForEach( beer => {
       if (beer.tried) {
         triedBeers.push(beer)
@@ -158,10 +158,10 @@ class App extends Component {
       <div>
       <h1> HELLO, JON! </h1>
       <Header
-        // currentView={this.state.currentView}
-        // handleView={this.handleView}
-        // triedCount={this.state.triedBeers.length}
-        // wantToTryCount={this.state.wantToTryBeers.length}
+        currentView={this.state.currentView}
+        handleView={this.handleView}
+        triedCount={this.state.triedBeers.length}
+        wantToTryCount={this.state.wantToTryBeers.length}
       />
       <Form
         handleCreateBeer={this.handleCreateBeer}
