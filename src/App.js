@@ -155,7 +155,7 @@ class App extends Component {
 ////////////////////////  RENDER  ////////////////////////
   render() {
     return (
-      <div>
+      <div className="container">
       <h1> HELLO, JON! </h1>
       <Header
         currentView={this.state.currentView}
