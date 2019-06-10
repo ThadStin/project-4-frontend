@@ -11,8 +11,8 @@ class App extends Component {
     super(props)
     this.state = {
       currentView: 'tried',
-      triedBeers: ['Temptress'],
-      wantToTryBeers: ['Pliny the Elder']
+      triedBeers: [],
+      wantToTryBeers: []
     }//------ Will probably have to update state -------
 
   /////////////  BINDING  /////////////
@@ -48,8 +48,8 @@ class App extends Component {
   } //----- this may need to change unsure about fetchBeers vs breweries
 
   sortBeers(beers) {
-    let triedBeers = ['Temptress']
-    let wantToTryBeers = ['Pliny the Elder']
+    let triedBeers = []
+    let wantToTryBeers = []
     beers.ForEach( beer => {
       if (beer.tried) {
         triedBeers.push(beer)
@@ -155,7 +155,7 @@ class App extends Component {
 ////////////////////////  RENDER  ////////////////////////
   render() {
     return (
-      <div>
+      <div className="container">
       <h1> HELLO, JON! </h1>
       <Header
         currentView={this.state.currentView}

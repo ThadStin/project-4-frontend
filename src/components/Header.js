@@ -13,9 +13,9 @@ class Header extends Component {
         </div>
         <ul>
           <li
-            onClick={() => {this.props.handleView('wantToTry')}}>{this.props.wantToTryCount}Want to Try</li>
+            onClick={() => {this.props.handleView('wantToTry')}}>{this.props.wantToTryCount} Want to Try</li>
           <li
-            onClick={() => {this.props.handleView('tried')}}>{this.props.triedCount}Tried</li>
+            onClick={() => {this.props.handleView('tried')}}>{this.props.triedCount} Tried</li>
         </ul>
       </div>
     )
