@@ -7,15 +7,15 @@ class Header extends Component {
         <div className="switchList">
           <h1>
             { this.props.currentView === 'tried'
-            ? `Beers I've Tried`
-            : `Beers I Want To Try` }
+            ? 'Tried'
+            : 'Want to try ' }
           </h1>
         </div>
         <ul>
           <li
-            onClick={() => {this.props.handleView('wantToTry')}}>{this.props.wantToTryCount} Want to Try</li>
+            onClick={() => {this.props.handleView('wantToTry')}}>{this.props.wantToTryCount}Want to Try</li>
           <li
-            onClick={() => {this.props.handleView('tried')}}>{this.props.triedCount} Tried</li>
+            onClick={() => {this.props.handleView('tried')}}>{this.props.triedCount}Tried</li>
         </ul>
       </div>
     )
