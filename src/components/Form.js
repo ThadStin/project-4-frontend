@@ -23,6 +23,7 @@ class Form extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
+
       // brewery_name: event.target.value,
       // beer_name: event.target.value,
       // beer_style: event.target.value
@@ -42,11 +43,12 @@ class Form extends Component {
     this.setState({
       brewery_name: '',
       beer_name: '',
-      beer_style: ''
+      beer_style: '',
+
      })
   }
 //------------- gonna have to flesh out this file quite a bit ----------
-
+// this form needs serious work
   render () {
     return (
       <div className="form" >
@@ -71,6 +73,50 @@ class Form extends Component {
             onChange={this.handleChange}
             value={this.state.beer_style}
             id='beer_style'
+          />
+{/*-----------/////////////////////////----------*/}
+          <input
+            type='text'
+            placeholder='Location'
+            onChange={this.handleChange}
+            value={this.state.location}
+            id='location'
+          />
+          <br></br>
+          <input
+            type="range" min="0" max="10"
+            placeholder='Ranking'
+            onChange={this.handleChange}
+            value={this.state.ranking}
+            id='ranking'
+          /><output id="ranking" htmlFor="ranking">{this.state.ranking}</output>
+          <input
+            type='checkbox'
+            placeholder='Tried'
+            onChange={this.handleChange}
+            value={this.state.tried}
+            id='tried'
+          />
+          <input
+            type='checkbox'
+            placeholder='Liked'
+            onChange={this.handleChange}
+            value={this.state.liked}
+            id='liked'
+          />
+          <input
+            type='text'
+            placeholder='Comments'
+            onChange={this.handleChange}
+            value={this.state.comments}
+            id='comments'
+          />
+          <input
+            type='text'
+            placeholder='Image address'
+            onChange={this.handleChange}
+            value={this.state.img}
+            id='img'
           />
           <button type='submit'> SUBMIT </button>
         </form>

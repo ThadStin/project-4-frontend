@@ -11,8 +11,8 @@ class App extends Component {
     super(props)
     this.state = {
       currentView: 'tried',
-      triedBeers: ['Temptress'],
-      wantToTryBeers: ['Pliny the Elder']
+      triedBeers: [],
+      wantToTryBeers: []
     }//------ Will probably have to update state -------
 
   /////////////  BINDING  /////////////
@@ -43,14 +43,14 @@ class App extends Component {
       .then(data => data.json())
       .then(jData => {
       // console.log('this is jData', jData)
-      this.sortTasks(jData)
+      this.sortBeers(jData)
     })
   } //----- this may need to change unsure about fetchBeers vs breweries
 
   sortBeers(beers) {
-    let triedBeers = ['Temptress']
-    let wantToTryBeers = ['Pliny the Elder']
-    beers.ForEach( beer => {
+    let triedBeers = []
+    let wantToTryBeers = []
+    beers.forEach( beer => {
       if (beer.tried) {
         triedBeers.push(beer)
       } else {
@@ -149,13 +149,13 @@ class App extends Component {
 
   /////////////////  DIDMOUNT  //////////////////
   componentDidMount() {
-    this.fetchBreweries()
+    this.fetchBeers()
   }
 
 ////////////////////////  RENDER  ////////////////////////
   render() {
     return (
-      <div>
+      <div className="container">
       <h1> HELLO, JON! </h1>
       <Header
         currentView={this.state.currentView}
