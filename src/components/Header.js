@@ -5,17 +5,18 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="switchList">
-          <h1>
+          <h3>
             { this.props.currentView === 'tried'
-            ? 'Tried'
-            : 'Want to try ' }
-          </h1>
+            ? `beers i've tried`
+            : `beers i want to try` }
+          </h3>
         </div>
         <ul>
           <li
-            onClick={() => {this.props.handleView('wantToTry')}}>{this.props.wantToTryCount}Want to Try</li>
+            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try.</li>
           <li
-            onClick={() => {this.props.handleView('tried')}}>{this.props.triedCount}Tried</li>
+            onClick={() => {this.props.handleView('tried')}}>
+            {this.props.triedCount} beers i've tried.</li>
         </ul>
       </div>
     )

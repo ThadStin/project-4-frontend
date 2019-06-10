@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   fetchBeers() {
-    fetch('http://localhost:3000/beers')
+    fetch('https://project-4-api.herokuapp.com/beers')
       .then(data => data.json())
       .then(jData => {
       // console.log('this is jData', jData)
@@ -159,7 +159,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      <h1> HELLO, JON! </h1>
+      <h1> cold ones. </h1>
       <Header
         currentView={this.state.currentView}
         handleView={this.handleView}
