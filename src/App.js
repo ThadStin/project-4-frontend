@@ -77,7 +77,7 @@ class App extends Component {
   }//// if Brewery selected get beer info for brewery
 
   handleCreateBeer(beer) {
-    fetch('http://localhost:3000/beers', {
+    fetch('https://project-4-api.herokuapp.com/beers', {
       body: JSON.stringify(beer),
       method: 'POST',
       headers: {
@@ -107,7 +107,7 @@ class App extends Component {
   ///////////////  UPDATE  ////////////
   handleCheck(beer, arrayIndex, currentArray) {
     beer.tried = !beer.tried
-    fetch('http://localhost:3000/beers/' + beer.id, {
+    fetch('https://project-4-api.herokuapp.com/beers' + beer.id, {
       body:JSON.stringify(beer),
       method: 'PUT',
       headers: {
