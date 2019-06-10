@@ -7,8 +7,8 @@ class Header extends Component {
         <div className="switchList">
           <h1>
             { this.props.currentView === 'tried'
-            ? 'Tried'
-            : 'Want to try ' }
+            ? `Beers I've Tried`
+            : `Beers I Want To Try` }
           </h1>
         </div>
         <ul>

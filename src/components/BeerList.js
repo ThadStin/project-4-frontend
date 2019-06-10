@@ -5,23 +5,9 @@ class BeerList extends Component {
   render () {
     return (
       <div className="beer-list">
-        { this.props.currentView === 'wantToTryBeers'
+        { this.props.currentView === 'tried'
           ? <div>
-              { this.props.wantToTryBeers.map((beer, index) => {
-                return (
-                  <Beer
-                    key={index}
-                    beer={beer}
-                    handleCheck={this.props.handleCheck}
-                    arrayIndex={index}
-                    currentArray='wantToTryBeers'
-                    handleDelete={this.props.handleDelete}
-                  />
-                )
-              })}
-          </div>
-          : <div>
-              {this.props.triedBeers.map((beer, index) =>{
+              { this.props.triedBeers.map((beer, index) => {
                 return (
                   <Beer
                     key={index}
@@ -33,8 +19,22 @@ class BeerList extends Component {
                   />
                 )
               })}
+          </div>
+          : <div className="beer-list">
+              {this.props.wantToTryBeers.map((beer, index) =>{
+                return (
+                  <Beer
+                    key={index}
+                    beer={beer}
+                    handleCheck={this.props.handleCheck}
+                    arrayIndex={index}
+                    currentArray='wantToTryBeers'
+                    handleDelete={this.props.handleDelete}
+                  />
+                )
+              })}
             </div>
-          }  
+          }
       </div>
     )
   }

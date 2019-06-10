@@ -43,14 +43,14 @@ class App extends Component {
       .then(data => data.json())
       .then(jData => {
       // console.log('this is jData', jData)
-      this.sortTasks(jData)
+      this.sortBeers(jData)
     })
   } //----- this may need to change unsure about fetchBeers vs breweries
 
   sortBeers(beers) {
     let triedBeers = []
     let wantToTryBeers = []
-    beers.ForEach( beer => {
+    beers.forEach( beer => {
       if (beer.tried) {
         triedBeers.push(beer)
       } else {
@@ -149,7 +149,7 @@ class App extends Component {
 
   /////////////////  DIDMOUNT  //////////////////
   componentDidMount() {
-    this.fetchBreweries()
+    this.fetchBeers()
   }
 
 ////////////////////////  RENDER  ////////////////////////
