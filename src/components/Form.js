@@ -23,6 +23,7 @@ class Form extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
+
       // brewery_name: event.target.value,
       // beer_name: event.target.value,
       // beer_style: event.target.value
@@ -42,7 +43,8 @@ class Form extends Component {
     this.setState({
       brewery_name: '',
       beer_name: '',
-      beer_style: ''
+      beer_style: '',
+
      })
   }
 //------------- gonna have to flesh out this file quite a bit ----------
@@ -87,7 +89,7 @@ class Form extends Component {
             onChange={this.handleChange}
             value={this.state.ranking}
             id='ranking'
-          /><output id="ranking" for="ranking">{this.state.ranking}</output>
+          /><output id="ranking" htmlFor="ranking">{this.state.ranking}</output>
           <input
             type='checkbox'
             placeholder='Tried'
