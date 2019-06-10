@@ -6,7 +6,7 @@ class Beer extends Component {
       <div>
         <div className="beer-name">
         <p>{this.props.beer.beer_name}</p>
-        <img src={this.props.beer.img}></img>
+        <img src={this.props.beer.img} alt=""></img>
         <p>{this.props.beer.brewery_name}</p>
         <p>{this.props.beer.comments}</p>
         </div>

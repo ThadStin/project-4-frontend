@@ -83,6 +83,7 @@ class Form extends Component {
             id='location'
           />
           <br></br>
+          <span>Rating: </span>
           <input
             type="range" min="0" max="10"
             placeholder='Ranking'
@@ -90,6 +91,7 @@ class Form extends Component {
             value={this.state.ranking}
             id='ranking'
           /><output id="ranking" htmlFor="ranking">{this.state.ranking}</output>
+          <span>Tried: </span>
           <input
             type='checkbox'
             placeholder='Tried'
@@ -97,6 +99,7 @@ class Form extends Component {
             value={this.state.tried}
             id='tried'
           />
+          <span>Liked: </span>
           <input
             type='checkbox'
             placeholder='Liked'
