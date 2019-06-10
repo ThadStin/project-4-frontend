@@ -11,8 +11,8 @@ class App extends Component {
     super(props)
     this.state = {
       currentView: 'tried',
-      triedbeers: ['Temptress'],
-      wantToTryBeers: ['Pliny the Elder']
+      triedBeers: [],
+      wantToTryBeers: []
     }//------ Will probably have to update state -------
 
   /////////////  BINDING  /////////////
@@ -125,7 +125,7 @@ class App extends Component {
           }
       })
       .catch(err => console.log('this is error from handleCheck', err))
-  } //----- I am not sure this is right
+  } //----- This is going to need a LOT f work!!
 
   removeFromArray(array, arrayIndex) {
     this.setState(prevState => {
@@ -155,19 +155,24 @@ class App extends Component {
 ////////////////////////  RENDER  ////////////////////////
   render() {
     return (
-      <div>
+      <div className="container">
       <h1> HELLO, JON! </h1>
       <Header
-        // currentView={this.state.currentView}
-        // handleView={this.handleView}
-        // triedCount={this.state.triedBeers.length}
-        // wantToTryCount={this.state.wantToTryBeers.length}
+        currentView={this.state.currentView}
+        handleView={this.handleView}
+        triedCount={this.state.triedBeers.length}
+        wantToTryCount={this.state.wantToTryBeers.length}
       />
       <Form
-
+        handleCreateBeer={this.handleCreateBeer}
       />
       <BeerList
-
+      currentView={this.state.currentView}
+      handleView={this.handleView}
+      wantToTryBeers={this.state.wantToTryBeers}
+      triedBeers={this.state.triedBeers}
+      handleCheck={this.handleCheck}
+      handleDelete={this.handleDelete}
       />
       </div>
     )
