@@ -107,7 +107,8 @@ class App extends Component {
   ///////////////  UPDATE  ////////////
   handleCheck(beer, arrayIndex, currentArray) {
     beer.tried = !beer.tried
-    fetch('https://project-4-api.herokuapp.com/beers' + beer.id, {
+    // console.log(beer)
+    fetch(`https://project-4-api.herokuapp.com/beers/${beer.id}`, {
       body:JSON.stringify(beer),
       method: 'PUT',
       headers: {
@@ -115,7 +116,9 @@ class App extends Component {
           'Content-Type': 'application/json'
         }
       })
-      .then (updatedBeer => updatedBeer.json())
+      .then (updatedBeer => {
+        return updatedBeer.json()
+      })
       .then(jData => {
         this.removeFromArray(currentArray, arrayIndex)
           if(currentArray === 'triedBeers') {

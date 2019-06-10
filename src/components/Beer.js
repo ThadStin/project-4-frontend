@@ -6,7 +6,7 @@ class Beer extends Component {
       <div>
         <div className="beer-name">
         <p>{this.props.beer.beer_name}</p>
-        <img src={this.props.beer.img} alt=""></img>
+        <img src={this.props.beer.img}></img>
         <p>{this.props.beer.brewery_name}</p>
         <p>{this.props.beer.comments}</p>
         </div>
@@ -14,11 +14,11 @@ class Beer extends Component {
           { this.props.beer.tried
             ? <i
               className="fas fa-not-equal"
-              onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray)}}
+              onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray )}}
               ></i>
             : <i
               className="fas fa-beer" //style={{color: f0fc}}
-              onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray)}}
+              onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'wantToTryBeers')}}
               ></i>
           }
           <i
@@ -39,3 +39,10 @@ class Beer extends Component {
 // #f9e234
 // export
 export default Beer
+// this.props.currentArray
+// this.props.currentArray
+// className="fas fa-not-equal"
+// onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'triedBeers')}}
+// onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray )}}
+// onClick={() =>
+//  {this.props.handlecheck(this.props.beer, this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}
