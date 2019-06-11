@@ -7,10 +7,10 @@ class BeerList extends Component {
       <div className="beer-list">
         <table>
           <tr>
+            <th> </th>
             <th> beer name: </th>
             <th> brewery: </th>
             <th> style: </th>
-            <th> options: </th>
           </tr>
         { this.props.currentView === 'tried'
           ? <React.Fragment>
