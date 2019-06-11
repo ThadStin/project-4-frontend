@@ -3,19 +3,13 @@ import React, { Component } from 'react'
 class Beer extends Component {
   render () {
     return (
-      <div>
-        <div className="beer">
-          <p>
-            name: {this.props.beer.beer_name}<br />
-            brewery: {this.props.beer.brewery_name}<br />
-            location: {this.props.beer.location}<br />
-            style: {this.props.beer.style}<br />
-            my rating: {this.props.beer.ranking}<br />
-            comments: {this.props.beer.comments}
-          </p>
-            <img src={this.props.beer.img}></img>
-        </div>
-        <div className="beer-actions">
+      <tr>
+        <td> {this.props.beer.beer_name} </td>
+        <td> {this.props.beer.brewery_name} </td>
+        <td> {this.props.beer.location} </td>
+        <td> {this.props.beer.style} </td>
+        <td> {this.props.beer.ranking} </td>
+        <td>
           { this.props.beer.tried
             ? <span></span>
             : <button
@@ -26,8 +20,8 @@ class Beer extends Component {
            onClick={() =>
               {this.props.handleDelete(this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}
           ><span className="delete far fa-trash-alt"></span> delete this beer. </button>
-        </div>
-      </div>
+        </td>
+      </tr>
     )
   }
 }
