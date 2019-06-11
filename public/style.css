@@ -1,0 +1,16 @@
+body {
+  margin: auto;
+}
+
+img {
+  max-width: 300px;
+}
+
+.container {
+  font-family: 'Nunito', sans-serif;
+  margin: auto;
+}
+
+#root {
+  margin: auto;
+}
