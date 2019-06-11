@@ -6,6 +6,10 @@ img {
   max-width: 300px;
 }
 
+th {
+  text-align: left;
+}
+
 .container {
   font-family: 'Nunito', sans-serif;
   margin: auto;

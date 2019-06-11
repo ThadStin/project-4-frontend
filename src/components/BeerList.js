@@ -9,8 +9,8 @@ class BeerList extends Component {
           <tr>
             <th> beer name: </th>
             <th> brewery: </th>
-            <th> location: </th>
             <th> style: </th>
+            <th> abv: </th>
             <th> rating: </th>
             <th> options: </th>
           </tr>
