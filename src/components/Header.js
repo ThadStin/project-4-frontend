@@ -4,6 +4,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+        <h1> cold ones. </h1>
         <div className="switchList">
           <h3>
             { this.props.currentView === 'tried'

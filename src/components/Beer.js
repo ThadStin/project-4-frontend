@@ -4,28 +4,28 @@ class Beer extends Component {
   render () {
     return (
       <div>
-        <div className="beer-name">
-        <p>{this.props.beer.beer_name}</p>
-        <img src={this.props.beer.img}></img>
-        <p>{this.props.beer.brewery_name}</p>
-        <p>{this.props.beer.comments}</p>
+        <div className="beer">
+          <p>
+            name: {this.props.beer.beer_name}<br />
+            brewery: {this.props.beer.brewery_name}<br />
+            location: {this.props.beer.location}<br />
+            style: {this.props.beer.style}<br />
+            my rating: {this.props.beer.ranking}<br />
+            comments: {this.props.beer.comments}
+          </p>
+            <img src={this.props.beer.img}></img>
         </div>
         <div className="beer-actions">
           { this.props.beer.tried
-            ? <i
-              className="fas fa-not-equal"
-              onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray )}}
-              ></i>
-            : <i
-              className="fas fa-beer" //style={{color: f0fc}}
+            ? <span></span>
+            : <button
               onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'wantToTryBeers')}}
-              ></i>
+              ><span className="fas fa-beer"></span> tried it! </button>
           }
-          <i
-           className="delete far fa-trash-alt"
+          <button
            onClick={() =>
               {this.props.handleDelete(this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}
-          ></i>
+          ><span className="delete far fa-trash-alt"></span> delete this beer. </button>
         </div>
       </div>
     )
