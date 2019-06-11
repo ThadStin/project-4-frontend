@@ -10,7 +10,6 @@ class BeerList extends Component {
             <th> beer name: </th>
             <th> brewery: </th>
             <th> style: </th>
-            <th> rating: </th>
             <th> options: </th>
           </tr>
         { this.props.currentView === 'tried'
