@@ -7,8 +7,6 @@ class Beer extends Component {
         <td> {this.props.beer.beer_name} </td>
         <td> {this.props.beer.brewery_name} </td>
         <td> {this.props.beer.beer_style} </td>
-        <td> {this.props.beer.abv} </td>
-        <td> {this.props.beer.ranking} </td>
         <td>
           { this.props.beer.tried
             ? <span></span>
