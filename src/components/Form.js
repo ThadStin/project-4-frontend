@@ -12,7 +12,8 @@ class Form extends Component {
       comments: '',
       tried: false,
       liked: false,
-      img: ''
+      img: '',
+      showForm: false
     }
     ///////////  binding  ///////////
     this.handleChange = this.handleChange.bind(this)
@@ -42,7 +43,7 @@ class Form extends Component {
 
   render () {
     return (
-      <div className="form" >
+      <div className="form">
         <form onSubmit={this.handleSubmit}>
           <input
             type='text'

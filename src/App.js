@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       currentView: 'tried',
       triedBeers: [],
-      wantToTryBeers: []
+      wantToTryBeers: [],
+      showForm: false
     }
   /////////////  BINDING  /////////////
     this.handleView = this.handleView.bind(this)
@@ -153,7 +154,6 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      <h1> cold ones. </h1>
       <Header
         currentView={this.state.currentView}
         handleView={this.handleView}
@@ -164,12 +164,12 @@ class App extends Component {
         handleCreateBeer={this.handleCreateBeer}
       />
       <BeerList
-      currentView={this.state.currentView}
-      handleView={this.handleView}
-      wantToTryBeers={this.state.wantToTryBeers}
-      triedBeers={this.state.triedBeers}
-      handleCheck={this.handleCheck}
-      handleDelete={this.handleDelete}
+        currentView={this.state.currentView}
+        handleView={this.handleView}
+        wantToTryBeers={this.state.wantToTryBeers}
+        triedBeers={this.state.triedBeers}
+        handleCheck={this.handleCheck}
+        handleDelete={this.handleDelete}
       />
       </div>
     )
