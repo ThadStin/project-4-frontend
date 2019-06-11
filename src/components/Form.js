@@ -23,14 +23,7 @@ class Form extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
-
-      // brewery_name: event.target.value,
-      // beer_name: event.target.value,
-      // beer_style: event.target.value
-
     })
-    // this.setState({beer_name: event.target.value})
-    // this.setState({beer_style: event.target.value})
   }
 
   handleSubmit = (event) => {
@@ -44,11 +37,9 @@ class Form extends Component {
       brewery_name: '',
       beer_name: '',
       beer_style: '',
-
      })
   }
-//------------- gonna have to flesh out this file quite a bit ----------
-// this form needs serious work
+
   render () {
     return (
       <div className="form" >

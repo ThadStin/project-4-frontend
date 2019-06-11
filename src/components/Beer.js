@@ -31,18 +31,4 @@ class Beer extends Component {
     )
   }
 }
-////------- This is going to need a lot of work to  do what we want it to do
-////------- this is just updating the tried and not tired beers with icon click
-////------- Also will probably need to give the handleCheck method much work
-////-------  all of this still errors on click of icon without backend
-
-// #f9e234
-// export
 export default Beer
-// this.props.currentArray
-// this.props.currentArray
-// className="fas fa-not-equal"
-// onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'triedBeers')}}
-// onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, this.props.currentArray )}}
-// onClick={() =>
-//  {this.props.handlecheck(this.props.beer, this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}

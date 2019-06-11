@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import './App.css';
 import Header from './components/Header'
 import BeerList from './components/BeerList'
 import Form from './components/Form'
@@ -13,8 +12,7 @@ class App extends Component {
       currentView: 'tried',
       triedBeers: [],
       wantToTryBeers: []
-    }//------ Will probably have to update state -------
-
+    }
   /////////////  BINDING  /////////////
     this.handleView = this.handleView.bind(this)
     this.fetchBeers = this.fetchBeers.bind(this)
@@ -27,8 +25,6 @@ class App extends Component {
     this.handleCheck = this.handleCheck.bind(this)
     this.removeFromArray = this.removeFromArray.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
-
-
   }
 
   ///////////////////  METHODS  //////////////////
@@ -42,10 +38,9 @@ class App extends Component {
     fetch('https://project-4-api.herokuapp.com/beers')
       .then(data => data.json())
       .then(jData => {
-      // console.log('this is jData', jData)
       this.sortBeers(jData)
     })
-  } //----- this may need to change unsure about fetchBeers vs breweries
+  }
 
   sortBeers(beers) {
     let triedBeers = []
@@ -74,7 +69,7 @@ class App extends Component {
 
   toggleBeer() {
 
-  }//// if Brewery selected get beer info for brewery
+  }
 
   handleCreateBeer(beer) {
     fetch('https://project-4-api.herokuapp.com/beers', {
@@ -93,7 +88,7 @@ class App extends Component {
       this.handleView('tried')
     })
     .catch(err => console.log(err))
-  }//------- will probably have to update THEN
+  }
 
   updateArray(beer, array) {
     this.setState( prevState => {
@@ -107,7 +102,6 @@ class App extends Component {
   ///////////////  UPDATE  ////////////
   handleCheck(beer, arrayIndex, currentArray) {
     beer.tried = !beer.tried
-    // console.log(beer)
     fetch(`https://project-4-api.herokuapp.com/beers/${beer.id}`, {
       body:JSON.stringify(beer),
       method: 'PUT',
@@ -128,7 +122,7 @@ class App extends Component {
           }
       })
       .catch(err => console.log('this is error from handleCheck', err))
-  } //----- This is going to need a LOT f work!!
+  }
 
   removeFromArray(array, arrayIndex) {
     this.setState(prevState => {
@@ -181,7 +175,6 @@ class App extends Component {
     )
   }
 }
-
 
 //export
 export default App;
