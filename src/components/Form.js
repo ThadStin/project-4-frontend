@@ -8,6 +8,7 @@ class Form extends Component {
       location: '',
       beer_name: '',
       beer_style: '',
+      abv: '',
       ranking: 0,
       comments: '',
       tried: false,
@@ -73,6 +74,13 @@ class Form extends Component {
             onChange={this.handleChange}
             value={this.state.location}
             id='location'
+          />
+          <input
+            type='text'
+            placeholder='ABV'
+            onChange={this.handleChange}
+            value={this.state.abv}
+            id='abv'
           />
           <br></br>
           <span>Rating: </span>
