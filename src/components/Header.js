@@ -12,13 +12,14 @@ class Header extends Component {
             : `beers i want to try` }
           </h3>
         </div>
-        <ul>
-          <li
-            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try.</li>
-          <li
+        <p>
+          <span
+            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try.</span>
+          <span>  ||  </span>
+          <span
             onClick={() => {this.props.handleView('tried')}}>
-            {this.props.triedCount} beers i've tried.</li>
-        </ul>
+            {this.props.triedCount} beers i've tried.</span>
+        </p>
       </div>
     )
   }

@@ -16,15 +16,23 @@ th {
   text-align: left;
 }
 
+table {
+  /* width: 500px; */
+}
+
 .beer-list {
   font-family: 'Nunito', sans-serif;
+}
+
+.beer-details {
+  /* width: 500px; */
 }
 
 .container {
 
   margin: auto;
   background-color: rgba(255,255,255,0.75);
-  width:500px;
+  width:700px;
 }
 
 #root {
