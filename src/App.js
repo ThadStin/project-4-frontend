@@ -19,8 +19,6 @@ class App extends Component {
     this.fetchBeers = this.fetchBeers.bind(this)
     this.sortBeers = this.sortBeers.bind(this)
     this.setBeers = this.setBeers.bind(this)
-    this.fetchBreweries = this.fetchBreweries.bind(this)
-    this.toggleBeer = this.toggleBeer.bind(this)
     this.handleCreateBeer = this.handleCreateBeer.bind(this)
     this.updateArray = this.updateArray.bind(this)
     this.handleCheck = this.handleCheck.bind(this)
@@ -64,13 +62,6 @@ class App extends Component {
   }
 
   /////////////// CREATE /////////////
-  fetchBreweries() {
-
-  }
-
-  toggleBeer() {
-
-  }
 
   handleCreateBeer(beer) {
     fetch('https://project-4-api.herokuapp.com/beers', {
