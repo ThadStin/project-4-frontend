@@ -6,12 +6,15 @@ class BeerList extends Component {
     return (
       <div className="beer-list">
         <table>
-          <tr>
-            <th> </th>
-            <th> beer name: </th>
-            <th> brewery: </th>
-            <th> style: </th>
-          </tr>
+          <thead>
+            <tr>
+              <th> </th>
+              <th> beer name: </th>
+              <th> brewery: </th>
+              <th> style: </th>
+            </tr>
+          </thead>
+          <tbody>
         { this.props.currentView === 'tried'
           ? <React.Fragment>
             { this.props.triedBeers.map((beer, index) => {
@@ -42,6 +45,7 @@ class BeerList extends Component {
             })}
             </React.Fragment>
           }
+          </tbody>
         </table>
       </div>
     )
