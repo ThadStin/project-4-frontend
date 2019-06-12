@@ -5,6 +5,13 @@ class Header extends Component {
     return (
       <div className="header">
         <h1> cold ones. </h1>
+        <ul>
+          <li
+            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try</li>
+          <li
+            onClick={() => {this.props.handleView('tried')}}>
+            {this.props.triedCount} beers i've tried</li>
+        </ul>
         <div className="switchList">
           <h3>
             { this.props.currentView === 'tried'
@@ -12,18 +19,9 @@ class Header extends Component {
             : `beers i want to try` }
           </h3>
         </div>
-        <p>
-          <span
-            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try.</span>
-          <span>  ||  </span>
-          <span
-            onClick={() => {this.props.handleView('tried')}}>
-            {this.props.triedCount} beers i've tried.</span>
-        </p>
       </div>
     )
   }
 }
-
 // export
 export default Header
