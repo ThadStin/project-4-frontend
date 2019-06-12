@@ -56,14 +56,25 @@ class Beer extends Component {
           <h2 ref={subtitle => this.subtitle = subtitle}>
             {this.props.beer.beer_name}
           </h2>
-          <button onClick={this.closeModal}>close</button>
+          <h3 ref={subtitle => this.subtitle = subtitle}>
+            {this.props.beer.brewery_name}
+          </h3>
+          <h4 ref={subtitle => this.subtitle = subtitle}>
+            {this.props.beer.location}
+          </h4>
+          <h5 ref={subtitle => this.subtitle = subtitle}>
+            style: {this.props.beer.beer_style} ||
+            abv: {this.props.beer.abv}
+          </h5>
           <div className="beer-details">
-            <img src={ this.props.beer.img } alt="" />
+            <img src={ this.props.beer.img } alt={this.props.beer.beer_name} />
             <p>
               <b>comments:</b><br />
               { this.props.beer.comments }
             </p>
-            <b>options:</b>
+            <b>options: </b>
+            <br />
+            <button onClick={this.closeModal}> close window. </button>
             { this.props.beer.tried
               ? <span></span>
               : <button
