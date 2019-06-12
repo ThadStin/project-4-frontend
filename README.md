@@ -13,6 +13,7 @@ Other software and techonology used includes:
 - ReactDOM
 - ReactModal
 - Trello
+- Postman
 
 ## Approach
 We started out by building off of what we learned in class using Ruby On Rails and React CRA. We didn't set out to have a mind-blowing concept, we wanted to showcase the technological skills we had learned in Bootcamp. From there, we took it a step further by employing multiple bang methods, toggle displays, and also installing ReactModal to render modals in the DOM. Finally, we wrote our own CSS to customize the experience.
