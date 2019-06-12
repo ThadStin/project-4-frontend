@@ -22,12 +22,16 @@ class Beer extends Component {
           <td> {this.props.beer.brewery_name} </td>
           <td> {this.props.beer.beer_style} </td>
         </tr>
-        <div className="beer-details" style={{display: this.state.viewDetails ? 'block' : 'none'}}>
-          <img src={ this.props.beer.img } alt="" />
-          <p> <b>comments:</b><br />
+        <tr className="beer-details" style={{display: this.state.viewDetails ? 'block' : 'none'}}>
+          <td>
+            <img src={ this.props.beer.img } alt="" />
+          </td>
+          <td>
+            <b>comments:</b><br />
             { this.props.beer.comments }
-          </p>
-          <p> <b>options:</b>
+          </td>
+          <td>
+            <b>options:</b>
             { this.props.beer.tried
             ? <span></span>
             : <button
@@ -41,8 +45,8 @@ class Beer extends Component {
                 >
               <span className="delete far fa-trash-alt"></span> delete this beer.
             </button>
-          </p>
-        </div>
+          </td>
+        </tr>
       </React.Fragment>
     )
   }
