@@ -38,3 +38,6 @@ This website was created with the beer enthusiast in mind.  A place to find beer
 ### Notes
 #### Jon
 This was an extremely rewarding exercise in collaboration. I had a blast working with Thad and problem solving to make this beneficial. Thankfully, we are on the same time zone and similar schedules and were able to work together almost the entire time. We had a few hiccups where we found ourselves working on the same bits of code early on, but as we got better with communication and using our Trello board, we definitely made sure we were working efficiently.
+
+#### Thad
+I enjoyed getting to work on this project with Jon.  An amazing guy to work with and learn from.  He was extremely patient with my shortfalls and more than willing to help me out with issues that I was having.  I especially liked Jon's organization.  Being able to see, first of all, how to organize a project of this size and then be able to work through it with him will definitely help me with MY project organization.
