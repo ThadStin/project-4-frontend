@@ -3,16 +3,22 @@ import React, { Component } from 'react'
 class Header extends Component {
   render() {
     return (
+      <React.Fragment>
       <div className="header">
-        <h1> cold ones. </h1>
-        <ul>
-          <li
-            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try</li>
-          <li
+        <div className="left">
+          <h1> cold ones. </h1>
+        </div>
+        <div className="right">
+          <span
+            onClick={() => {this.props.handleView('wantToTry')}}> {this.props.wantToTryCount} beers i want to try
+          </span>
+          <br />
+          <span
             onClick={() => {this.props.handleView('tried')}}>
-            {this.props.triedCount} beers i've tried</li>
-        </ul>
-        <p>click to above switch lists</p>
+            {this.props.triedCount} beers i've tried
+          </span>
+          <p>click to above switch lists</p>
+        </div>
         <div className="switchList">
           <h3>
             { this.props.currentView === 'tried'
@@ -21,6 +27,7 @@ class Header extends Component {
           </h3>
         </div>
       </div>
+      </React.Fragment>
     )
   }
 }
