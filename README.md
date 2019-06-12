@@ -41,3 +41,11 @@ This was an extremely rewarding exercise in collaboration. I had a blast working
 
 #### Thad
 I enjoyed getting to work on this project with Jon.  An amazing guy to work with and learn from.  He was extremely patient with my shortfalls and more than willing to help me out with issues that I was having.  I especially liked Jon's organization.  Being able to see, first of all, how to organize a project of this size and then be able to work through it with him will definitely help me with MY project organization.
+
+#### tools links
+google doc
+https://drive.google.com/drive/folders/1UaL3laoFhrhHTHAoHsO7P232du79ah6N
+
+Trello board
+https://trello.com/b/zC0NLl0b/jon-and-thad-app
+
