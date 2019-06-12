@@ -1,55 +1,83 @@
 import React, { Component } from 'react'
-import {Popout} from 'react-popout-component';
+import ReactDOM from 'react-dom'
+import Modal from 'react-modal'
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
+Modal.setAppElement('#root')
 
 class Beer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showPopout: false
+      showModal: false
     }
+    this.openModal = this.openModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
-  toggleDetails = () => {
-    this.setState({showPopout: true});
+  openModal() {
+    this.setState({showModal: true})
   }
 
-  popoutClosed = () => {
-    this.setState({showPopout: false});
+  afterOpenModal() {
+    this.subtitle.style.color = '#f00'
+  }
+
+  closeModal() {
+    this.setState({showModal: false})
   }
 
   render () {
     return (
       <React.Fragment>
         <tr>
-          <td> <button onClick={this.toggleDetails}> show details. </button> </td>
+          <td> <button onClick={this.openModal}> show details. </button> </td>
           <td> {this.props.beer.beer_name} </td>
           <td> {this.props.beer.brewery_name} </td>
           <td> {this.props.beer.beer_style} </td>
         </tr>
-        {this.state.showPopout && (
-          <Popout title='beer-details' onClosing={this.popoutClosed}>
-            <div className="beer-details">
-              <img src={ this.props.beer.img } alt="" />
-              <p>
-                <b>comments:</b><br />
-                { this.props.beer.comments }
-              </p>
-              <b>options:</b>
-              { this.props.beer.tried
-                ? <span></span>
-                : <button
-                  onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'wantToTryBeers')}}
-                  ><span className="fas fa-beer"></span> tried it! </button>
-              }
-              <br />
-              <button
-                onClick={() =>
-                  {this.props.handleDelete(this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}
-                >
-                <span className="delete far fa-trash-alt"></span> delete this beer.
-              </button>
-            </div>
-          </Popout>
-        )}
+        <Modal
+          isOpen={this.state.showModal}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Beer Details"
+        >
+          <h2 ref={subtitle => this.subtitle = subtitle}>
+            {this.props.beer.beer_name}
+          </h2>
+          <button onClick={this.closeModal}>close</button>
+          <div className="beer-details">
+            <img src={ this.props.beer.img } alt="" />
+            <p>
+              <b>comments:</b><br />
+              { this.props.beer.comments }
+            </p>
+            <b>options:</b>
+            { this.props.beer.tried
+              ? <span></span>
+              : <button
+                onClick={() => {this.props.handleCheck(this.props.beer, this.props.arrayIndex, 'wantToTryBeers')}}
+                ><span className="fas fa-beer"></span> tried it! </button>
+            }
+            <button
+              onClick={() =>
+                {this.props.handleDelete(this.props.beer.id, this.props.arrayIndex, this.props.currentArray)}}
+              >
+              <span className="delete far fa-trash-alt"></span> delete this beer.
+            </button>
+          </div>
+        </Modal>
       </React.Fragment>
     )
   }
