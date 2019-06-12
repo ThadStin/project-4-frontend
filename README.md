@@ -14,6 +14,7 @@ Other software and techonology used includes:
 - ReactModal
 - Trello
 - Postman
+- CORS
 
 - Link to API repo on Github:
 https://github.com/jonnyphilly/project-4-api
