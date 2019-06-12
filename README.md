@@ -4,7 +4,7 @@
 With the explosion of Craft beer over the past 10 years, it has become impossible to remember all of the beers a person would like to try.  Especially with the popularity of seasonal or limited release beers and the constant output of new styles. Occasionally, a beer will even change names (i.e. Stone Enjoy By:) making it even more difficult to keep track of beers.
 
 ## Technologies Used
-'cold ones.' was built with React using Create React App and Ruby on Rails. It has it's own fully functioning API that operates using Ruby on Rails, while the front end runs on React using Create React App. It has full CRUD and is hosted on Heroku.
+'cold ones.' was built with React using Create React App and Ruby on Rails. It has it's own fully functioning API that operates using Ruby on Rails, while the front end runs on React using Create React App. It has full CRUD, is hosted on Heroku, and features responsive design.
 
 Other software and techonology used includes:
 - NPMjs
