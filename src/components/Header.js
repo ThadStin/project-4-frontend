@@ -12,6 +12,7 @@ class Header extends Component {
             onClick={() => {this.props.handleView('tried')}}>
             {this.props.triedCount} beers i've tried</li>
         </ul>
+        <p>click to above switch lists</p>
         <div className="switchList">
           <h3>
             { this.props.currentView === 'tried'
