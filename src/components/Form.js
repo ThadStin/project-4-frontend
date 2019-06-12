@@ -20,6 +20,7 @@ class Form extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.clearForm = this.clearForm.bind(this)
+    this.toggleForm = this.toggleForm.bind(this)
   }
   ////////////  methods  ///////////
   handleChange = (e) => {
@@ -42,9 +43,18 @@ class Form extends Component {
      })
   }
 
+  toggleForm()  {
+    this.setState({
+      showForm: !this.state.showForm
+    })
+  }
+
   render () {
     return (
       <div className="form">
+        <button onClick={this.toggleForm}>add a new beer</button>
+        { this.state.showForm === true
+        ?
         <form onSubmit={this.handleSubmit}>
           <input
             type='text'
@@ -67,7 +77,6 @@ class Form extends Component {
             value={this.state.beer_style}
             id='beer_style'
           />
-{/*-----------/////////////////////////----------*/}
           <input
             type='text'
             placeholder='Location'
@@ -82,7 +91,6 @@ class Form extends Component {
             value={this.state.abv}
             id='abv'
           />
-          <br></br>
           <span>Rating: </span>
           <input
             type="range" min="0" max="10"
@@ -91,6 +99,7 @@ class Form extends Component {
             value={this.state.ranking}
             id='ranking'
           /><output id="ranking" htmlFor="ranking">{this.state.ranking}</output>
+          <br></br>
           <span>Tried: </span>
           <input
             type='checkbox'
@@ -121,8 +130,11 @@ class Form extends Component {
             value={this.state.img}
             id='img'
           />
+          <br></br>
           <button type='submit'> SUBMIT </button>
         </form>
+       : <span></span>
+     }
       </div>
     )
   }

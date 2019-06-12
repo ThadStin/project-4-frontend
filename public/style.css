@@ -42,6 +42,7 @@ table {
 h1 {
   font-size: 4em;
   margin-right: 15em;
+  margin-bottom: -.5em;
 }
 
 ul {
@@ -53,8 +54,13 @@ li {
   font-size: 1.25em;
 }
 
+p {
+  margin-top: -.75em;
+  font-size: 75%;
+}
+
 .header {
-  color: red;
+  color: #444444;
   /* #ededed */
   text-align: center;
 }
@@ -65,13 +71,34 @@ li {
 /* ------ FORM ----- */
 .form {
   display: inline-block;
-  max-width: 25%;
+  max-width: 95%;
   max-height: 35%;
+  text-align: center;
+  color: #444444;
 }
 
 input[type=text] {
   /* background-color: #3CBC8D; */
-  width: 90%;
-  padding: 3%;
+  width: 25%;
+  padding: 1%;
   margin: 1%;
+}
+
+h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* ----- submit button ------- */
+button[type=submit] {
+  background-color: #444444;
+  color: white;
+  padding: 1%;
+}
+
+/* ---- beer button ----- */
+button {
+  background-color: #444444;
+  color: white;
+  padding: 1%;
 }
